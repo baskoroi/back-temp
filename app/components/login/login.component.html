@@ -1,0 +1,29 @@
+<div class="login">
+    <div class="login-left half">
+        <img src="http://res.cloudinary.com/lighthauz-harbor/image/upload/v1478504606/lighthauz-logo.small_vsu1sc.png" alt="Lighthauz: Connecting the Unconnected" class="login-pic">
+    </div>
+    <div class="login-right half">
+        <h1>Enter as Admin</h1>
+        <form name="form-login" class="form-login"
+            (ngSubmit)="onSubmitLogin()" #f="ngForm">
+
+            <!-- TODO: display failure/error message here, if any -->
+            <div *ngIf="message !== ''">
+                {{message}}
+            </div>
+            <input type="text" class="txt-login" 
+                name="username"
+                placeholder="Username" 
+                [(ngModel)]="model.username" #username="ngModel"
+                required>
+            <input type="password" class="txt-login" 
+                name="password"
+                placeholder="Password" 
+                [(ngModel)]="model.password" #password="ngModel"
+                required>
+            <button type="submit" class="btn-login"
+                [disabled]="loading">Login</button>
+        </form>
+    </div>
+</div>
+<div class="clearfix"></div>

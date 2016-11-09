@@ -1,0 +1,83 @@
+{
+  "name": "lighthauz-server",
+  "version": "0.0.1",
+  "main": "server.js",
+  "scripts": {
+    "dev": "concurrently --kill-others \"npm run pack:dev\" \"npm run serve:dev\" ",
+    "start": "concurrently --kill-others --raw \"npm run serve\" \"npm run pack\" ",
+    "pack": "webpack",
+    "pack:dev": "webpack --watch",
+    "serve": "node server.js",
+    "serve:dev": "nodemon --watch server server.js",
+    "lint": "tslint ./app/**/*.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Lighthauz-Harbor/lighthauz-server.git"
+  },
+  "keywords": [],
+  "contributors": [
+    "Baskoro Indrayana <baskoroindrayana@outlook.com>",
+    "David Ryan <dvid.ryan.k@hotmail.com>",
+    "Richentra Zinwie Wijaya <richentra@yahoo.co.id>"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Lighthauz-Harbor/lighthauz-server/issues"
+  },
+  "homepage": "https://github.com/Lighthauz-Harbor/lighthauz-server#readme",
+  "dependencies": {
+    "@angular/common": "^2.1.2",
+    "@angular/compiler": "^2.1.2",
+    "@angular/core": "^2.1.2",
+    "@angular/forms": "^2.1.2",
+    "@angular/http": "^2.1.2",
+    "@angular/platform-browser": "^2.1.2",
+    "@angular/platform-browser-dynamic": "^2.1.2",
+    "@angular/router": "^3.1.2",
+    "@angular/upgrade": "^2.1.2",
+    "bcrypt-nodejs": "0.0.3",
+    "body-parser": "^1.15.2",
+    "concurrently": "^3.1.0",
+    "cookie-parser": "^1.4.3",
+    "es6-shim": "^0.35.1",
+    "express": "^4.14.0",
+    "express-session": "^1.14.1",
+    "flash": "^1.1.0",
+    "jsonwebtoken": "^7.1.9",
+    "method-override": "^2.3.6",
+    "morgan": "^1.7.0",
+    "neo4j-driver": "^1.1.0-M02",
+    "passport": "^0.3.2",
+    "passport-local": "^1.0.0",
+    "passport-local-mongoose": "^4.0.0",
+    "reflect-metadata": "^0.1.8",
+    "rxjs": "^5.0.0-beta.12",
+    "uuid": "^2.0.3",
+    "webpack": "^1.13.3",
+    "zone.js": "^0.6.26"
+  },
+  "devDependencies": {
+    "angular2-styles-loader": "^1.0.0",
+    "angular2-template-loader": "^0.5.0",
+    "css-loader": "^0.25.0",
+    "extract-text-webpack-plugin": "^1.0.1",
+    "html-webpack-plugin": "^2.24.0",
+    "jasmine-core": "^2.5.2",
+    "karma": "^1.3.0",
+    "karma-chrome-launcher": "^2.0.0",
+    "karma-jasmine": "^1.0.2",
+    "karma-phantomjs-launcher": "^1.0.2",
+    "karma-sourcemap-loader": "^0.3.7",
+    "karma-webpack": "^1.8.0",
+    "phantomjs-prebuilt": "^2.1.13",
+    "raw-loader": "^0.5.1",
+    "style-loader": "^0.13.1",
+    "to-string-loader": "^1.1.5",
+    "ts-loader": "^0.9.5",
+    "tslint": "^3.15.1",
+    "tslint-loader": "^2.1.5",
+    "typescript": "^2.0.6",
+    "typings": "^1.5.0"
+  }
+}

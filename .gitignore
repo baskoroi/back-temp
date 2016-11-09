@@ -1,0 +1,14 @@
+# Build or public directories
+dist/
+
+# NPM
+node_modules/
+
+# Neo4j DB files
+default.graphdb/
+
+# logs
+*.log
+logs
+*.logs
+npm-debug.log*
